@@ -2,5 +2,8 @@
 
 import greeting from '../src/index.js';
 
-console.log('Welcome to the Brain Games!');
+console.log('Welcome');
+console.log('to the');
+console.log('Brain');
+console.log('Games!');
 greeting();
