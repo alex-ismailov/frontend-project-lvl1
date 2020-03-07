@@ -4,3 +4,4 @@ JavaScript tools
 
 ---
 [![Maintainability](https://api.codeclimate.com/v1/badges/22e19349e341eddcdc3e/maintainability)](https://codeclimate.com/github/alex-ismailov/frontend-project-lvl1/maintainability)
+![](https://github.com/actions/hello-world/workflows/<WORKFLOW_NAME>/badge.svg)
