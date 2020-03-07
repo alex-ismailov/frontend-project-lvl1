@@ -17,9 +17,9 @@ jobs:
         node-version: [13.x]
 
     steps:
-    - name: npm install
-      run: |
-        npm install
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }} 
+    - name: Install dependencies
+      run: npm install
     - name: Run linter
-      run: |
-        make lint
+      run: make lint
