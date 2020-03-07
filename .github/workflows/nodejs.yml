@@ -17,6 +17,9 @@ jobs:
         node-version: [13.x]
 
     steps:
+    - name: npm install
+      run: |
+        npm install
     - name: Run linter
       run: |
         make lint
