@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
-import greeting from '../src/index.js'
+import greeting from '../src/index.js';
 
 const getRandomNumber = () => {
   const MAX = 20;
@@ -10,7 +10,7 @@ const getRandomNumber = () => {
 const isEven = (n) => n % 2 === 0;
 
 const isRightAnswer = (guess, currQuestNumber) => {
-  switch(guess) {
+  switch (guess) {
     case 'yes':
       return isEven(currQuestNumber) === true;
     case 'no':
@@ -22,18 +22,19 @@ const isRightAnswer = (guess, currQuestNumber) => {
 
 /* *********************************************** */
 
-const userName = greeting();
+const nameOfUser = greeting();
 
 const brainEvenGame = (userName, amountOfRounds) => {
-  console.log(`Answer "yes" if the number is even, otherwise answer "no"`);
-  while(amountOfRounds !== 0) {
+  let round = amountOfRounds;
+  console.log('Answer \'yes\' if the number is even, otherwise answer \'no\'');
+  while (round !== 0) {
     const currQuestNumber = getRandomNumber();
     console.log(`Question: ${currQuestNumber}`);
     const answer = readlineSync.question('Answer: ');
 
     if (isRightAnswer(answer, currQuestNumber)) {
       console.log('Correct!');
-      amountOfRounds -= 1;
+      round -= 1;
     } else {
       console.log(`"yes" is wrong answer ;(. Correct answer was "no".\nLet's try again, ${userName}!`);
       return false;
@@ -44,4 +45,4 @@ const brainEvenGame = (userName, amountOfRounds) => {
 };
 
 /* testing */
-brainEvenGame(userName, 3);
+brainEvenGame(nameOfUser, 3);
