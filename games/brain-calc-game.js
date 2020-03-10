@@ -1,6 +1,6 @@
 import {
   getUserAnswer, getRandomNumber, isRightAnswer, checkUserAnswer,
-} from '../src/num-lib.js';
+} from '../src/internal-lib.js';
 
 const calc = (a, opertor, b) => {
   switch (opertor) {

@@ -1,6 +1,6 @@
 import {
   isEven, getUserAnswer, getRandomNumber, isRightAnswer, checkUserAnswer
-} from '../src/num-lib.js';
+} from '../src/internal-lib.js';
 
 const getRightAnswer = (questNumber) => (
   isEven(questNumber)
