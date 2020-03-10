@@ -1,5 +1,5 @@
 import {
-  isEven, getUserAnswer, getRandomNumber, isRightAnswer, checkUserAnswer
+  isEven, getUserAnswer, getRandomNumber, checkUserAnswer,
 } from '../src/internal-lib.js';
 
 const getRightAnswer = (questNumber) => (
@@ -12,14 +12,14 @@ const getRightAnswer = (questNumber) => (
 const brainEvenGame = (userName, amountOfRounds) => {
   let round = amountOfRounds;
   console.log('Answer \'yes\' if the number is even, otherwise answer \'no\'');
- 
+
   while (round !== 0) {
     const currQuestNumber = getRandomNumber(1);
     const rightAnswer = getRightAnswer(currQuestNumber);
 
     console.log(`Question: ${currQuestNumber}`);
     const answer = getUserAnswer();
-    
+
     if (checkUserAnswer(userName, answer, rightAnswer)) {
       round -= 1;
     } else {

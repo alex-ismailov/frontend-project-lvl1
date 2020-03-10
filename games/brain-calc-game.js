@@ -1,5 +1,5 @@
 import {
-  getUserAnswer, getRandomNumber, isRightAnswer, checkUserAnswer,
+  getUserAnswer, getRandomNumber, checkUserAnswer,
 } from '../src/internal-lib.js';
 
 const calc = (a, opertor, b) => {
@@ -15,7 +15,9 @@ const calc = (a, opertor, b) => {
   }
 };
 
-const getRightAnswer = (firstOperand, operator, secondOperand) => calc(firstOperand, operator, secondOperand);
+const getRightAnswer = (firstOperand, operator, secondOperand) => (
+  calc(firstOperand, operator, secondOperand)
+);
 
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
@@ -27,7 +29,7 @@ const getRandomOperator = () => {
 const brainCalcGame = (userName, amountOfRounds) => {
   let round = amountOfRounds;
   console.log('What is the result of the expression?');
-  
+
   while (round !== 0) {
     const firstOperand = getRandomNumber();
     const secondOperand = getRandomNumber();
@@ -36,7 +38,7 @@ const brainCalcGame = (userName, amountOfRounds) => {
 
     console.log(`Question: ${firstOperand} ${operator} ${secondOperand}`);
     const answer = Number(getUserAnswer());
-    
+
     if (checkUserAnswer(userName, answer, rightAnswer)) {
       round -= 1;
     } else {
