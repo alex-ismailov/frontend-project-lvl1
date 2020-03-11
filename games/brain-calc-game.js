@@ -38,28 +38,13 @@ const getRightAnswer = (expr) => {
   return String(rightAnswer);
 };
 
-
 /* ************************************** */
-const brainCalcGame = (msg, question) => {
-  switch (msg) {
-    case 'getTaskText':
-      return getTaskText();
-    case 'getQuestion':
-      return getQuestion();
-    case 'getRightAnswer':
-      return getRightAnswer(question);
-    // case 'isRightAnswer':
-    //   return isRightAnswer(answer, question);
-    default:
-      null;
-  }
+const getBrainCalcGameData = () => {
+  const taskText = getTaskText();
+  const question = getQuestion();
+  const rightAnswer = getRightAnswer(question);
+
+  return [taskText, question, rightAnswer];
 };
 
-
-
-
-// const brainCalcGame = (msg, answer, question) => {
-//   return gameData[текстЗадания, вопрос, правильныйОтвет];
-// };
-
-export default brainCalcGame;
+export default getBrainCalcGameData;

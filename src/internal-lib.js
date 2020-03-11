@@ -8,7 +8,7 @@ const getUserAnswer = () => readlineSync.question('Answer: ');
 
 const isRightAnswer = (guess, rightAnswer) => guess === rightAnswer;
 
-const askUserName = () => readlineSync.question('May I have your name? ');
+const getUserName = () => readlineSync.question('May I have your name? ');
 
 const checkUserAnswer = (userName, userAnswer, rightAnswer) => {
   if (isRightAnswer(userAnswer, rightAnswer)) {
@@ -21,7 +21,12 @@ const checkUserAnswer = (userName, userAnswer, rightAnswer) => {
   return false;
 };
 
+const getTaskText = (gameData) => gameData[0];
+const getQuestion = (gameData) => gameData[1];
+const getRightAnswer = (gameData) => gameData[2];
 
 export {
-  getRandomNumber, isEven, getUserAnswer, isRightAnswer, askUserName, checkUserAnswer,
+  getRandomNumber, isEven, getUserAnswer, isRightAnswer,
+  getUserName, checkUserAnswer, getTaskText, getQuestion,
+  getRightAnswer,
 };

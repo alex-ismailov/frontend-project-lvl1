@@ -1,34 +1,22 @@
 import {
-  isEven, getUserAnswer, getRandomNumber, checkUserAnswer,
+  getRandomNumber, isEven,
 } from '../src/internal-lib.js';
 
-const getRightAnswer = (questNumber) => (
-  isEven(questNumber)
+const getTaskText = () => 'Answer \"yes\" if the number is even, otherwise answer \"no\"';
+const getQuestion = () => getRandomNumber();
+const getRightAnswer = (question) => (
+  isEven(question)
     ? 'yes'
     : 'no'
 );
 
-/* ************************************** */
-const brainEvenGame = (userName, amountOfRounds) => {
-  let round = amountOfRounds;
-  console.log('Answer \'yes\' if the number is even, otherwise answer \'no\'');
+/* ******************************* */
+const getBrainEvenGameData = () => {
+  const taskText = getTaskText();
+  const question = getQuestion();
+  const rightAnswer = getRightAnswer(question);
 
-  while (round !== 0) {
-    const currQuestNumber = getRandomNumber(1);
-    const rightAnswer = getRightAnswer(currQuestNumber);
-
-    console.log(`Question: ${currQuestNumber}`);
-    const answer = getUserAnswer();
-
-    if (checkUserAnswer(userName, answer, rightAnswer)) {
-      round -= 1;
-    } else {
-      return false;
-    }
-  }
-
-  console.log(`Congratulations, ${userName}!`);
-  return true;
+  return [taskText, question, rightAnswer];
 };
 
-export default brainEvenGame;
+export default getBrainEvenGameData;
