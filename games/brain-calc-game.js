@@ -1,8 +1,8 @@
-import {
-  getUserAnswer, getRandomNumber, checkUserAnswer,
-} from '../src/internal-lib.js';
+import { getRandomNumber } from '../src/internal-lib.js';
 
-const calc = (a, opertor, b) => {
+const calc = (first, opertor, second) => {
+  const a = new Number(first);
+  const b = new Number(second);
   switch (opertor) {
     case '+':
       return a + b;
@@ -15,40 +15,51 @@ const calc = (a, opertor, b) => {
   }
 };
 
-const getRightAnswer = (firstOperand, operator, secondOperand) => (
-  calc(firstOperand, operator, secondOperand)
-);
-
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
   const randomIndex = getRandomNumber(0, operators.length - 1);
   return operators[randomIndex];
 };
 
-/* ************************************** */
-const brainCalcGame = (userName, amountOfRounds) => {
-  let round = amountOfRounds;
-  console.log('What is the result of the expression?');
+const getTaskText = () => 'What is the result of the expression?';
 
-  while (round !== 0) {
-    const firstOperand = getRandomNumber();
-    const secondOperand = getRandomNumber();
-    const operator = getRandomOperator();
-    const rightAnswer = getRightAnswer(firstOperand, operator, secondOperand);
+const firstOperand = () => getRandomNumber();
+const secondOperand = () => getRandomNumber();
+const operator = () => getRandomOperator();
 
-    console.log(`Question: ${firstOperand} ${operator} ${secondOperand}`);
-    const answer = Number(getUserAnswer());
+const getQuestion = () => (
+  `${firstOperand()} ${operator()} ${secondOperand()}`
+);
 
-    if (checkUserAnswer(userName, answer, rightAnswer)) {
-      round -= 1;
-    } else {
-      return false;
-    }
-  }
-
-  console.log(`Congratulations, ${userName}!`);
-  return true;
+const getRightAnswer = (expr) => {
+  const splittedExpr = expr.split(' ');
+  const [firstOperand, operator, secondOperand] = splittedExpr;
+  const rightAnswer = calc(firstOperand, operator, secondOperand);
+  return String(rightAnswer);
 };
 
-// brainCalcGame('Alex', 3);
+
+/* ************************************** */
+const brainCalcGame = (msg, question) => {
+  switch (msg) {
+    case 'getTaskText':
+      return getTaskText();
+    case 'getQuestion':
+      return getQuestion();
+    case 'getRightAnswer':
+      return getRightAnswer(question);
+    // case 'isRightAnswer':
+    //   return isRightAnswer(answer, question);
+    default:
+      null;
+  }
+};
+
+
+
+
+// const brainCalcGame = (msg, answer, question) => {
+//   return gameData[текстЗадания, вопрос, правильныйОтвет];
+// };
+
 export default brainCalcGame;

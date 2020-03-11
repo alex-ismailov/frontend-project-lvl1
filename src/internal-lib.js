@@ -8,6 +8,8 @@ const getUserAnswer = () => readlineSync.question('Answer: ');
 
 const isRightAnswer = (guess, rightAnswer) => guess === rightAnswer;
 
+const askUserName = () => readlineSync.question('May I have your name? ');
+
 const checkUserAnswer = (userName, userAnswer, rightAnswer) => {
   if (isRightAnswer(userAnswer, rightAnswer)) {
     console.log('Correct!');
@@ -21,5 +23,5 @@ const checkUserAnswer = (userName, userAnswer, rightAnswer) => {
 
 
 export {
-  getRandomNumber, isEven, getUserAnswer, isRightAnswer, checkUserAnswer,
+  getRandomNumber, isEven, getUserAnswer, isRightAnswer, askUserName, checkUserAnswer,
 };
