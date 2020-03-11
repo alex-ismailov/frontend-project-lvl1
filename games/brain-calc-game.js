@@ -1,8 +1,8 @@
 import { getRandomNumber } from '../src/internal-lib.js';
 
 const calc = (first, opertor, second) => {
-  const a = new Number(first);
-  const b = new Number(second);
+  const a = Number(first);
+  const b = Number(second);
   switch (opertor) {
     case '+':
       return a + b;
@@ -23,18 +23,19 @@ const getRandomOperator = () => {
 
 const getTaskText = () => 'What is the result of the expression?';
 
-const firstOperand = () => getRandomNumber();
-const secondOperand = () => getRandomNumber();
-const operator = () => getRandomOperator();
+const getFirstOperand = () => getRandomNumber();
+const getSecondOperand = () => getRandomNumber();
+const getOperator = () => getRandomOperator();
 
 const getQuestion = () => (
-  `${firstOperand()} ${operator()} ${secondOperand()}`
+  `${getFirstOperand()} ${getOperator()} ${getSecondOperand()}`
 );
 
 const getRightAnswer = (expr) => {
   const splittedExpr = expr.split(' ');
-  const [firstOperand, operator, secondOperand] = splittedExpr;
-  const rightAnswer = calc(firstOperand, operator, secondOperand);
+  const [firstOperand, operator, secondOperator] = splittedExpr;
+  const rightAnswer = calc(firstOperand, operator, secondOperator);
+
   return String(rightAnswer);
 };
 
