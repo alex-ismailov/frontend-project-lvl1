@@ -7,12 +7,13 @@ import {
 const startGame = (getGameData) => {
   console.log('Welcome to the Brain Games!');
   const userName = getUserName();
-
-  let gameData = getGameData();
-  if (gameData.length === 0) {
+  console.log(`Hello, ${userName}!`);
+  
+  if (!getGameData) {
     return false;
   }
 
+  let gameData = getGameData();
   console.log(getTaskText(gameData));
   let round = 3;
   while (round !== 0) {
