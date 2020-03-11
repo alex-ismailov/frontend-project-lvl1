@@ -3,12 +3,11 @@ import {
   getTaskText, getQuestion, getRightAnswer,
 } from './internal-lib.js';
 
-
 const startGame = (getGameData) => {
   console.log('Welcome to the Brain Games!');
   const userName = getUserName();
   console.log(`Hello, ${userName}!`);
-  
+
   if (!getGameData) {
     return false;
   }
@@ -28,7 +27,7 @@ const startGame = (getGameData) => {
       );
       return false;
     }
-    
+
     console.log('Correct!');
     round -= 1;
     gameData = getGameData();
