@@ -2,7 +2,7 @@ import {
   getRandomNumber, isEven,
 } from '../src/internal-lib.js';
 
-const getTaskText = () => 'Answer \"yes\" if the number is even, otherwise answer \"no\"';
+const getTaskText = () => 'Answer "yes" if the number is even, otherwise answer "no"';
 const getQuestion = () => getRandomNumber();
 const getRightAnswer = (question) => (
   isEven(question)
