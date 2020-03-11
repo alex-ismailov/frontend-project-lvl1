@@ -1,5 +1,5 @@
 import {
-  getUserName, getUserAnswer, checkUserAnswer,
+  getUserName, getUserAnswer, isRightAnswer,
   getTaskText, getQuestion, getRightAnswer,
 } from './internal-lib.js';
 
@@ -15,16 +15,23 @@ const startGame = (getGameData) => {
 
   let gameData = getGameData();
   console.log(getTaskText(gameData));
+
   let round = 3;
   while (round !== 0) {
     console.log(getQuestion(gameData));
     const userAnswer = getUserAnswer();
     const rightAnswer = getRightAnswer(gameData);
-    if (!checkUserAnswer(userName, userAnswer, rightAnswer)) {
+
+    if (!isRightAnswer(userAnswer, rightAnswer)) {
+      console.log(
+        `"${userAnswer}" is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`,
+      );
       return false;
     }
-    gameData = getGameData();
+    
+    console.log('Correct!');
     round -= 1;
+    gameData = getGameData();
   }
 
   console.log(`Congratulations, ${userName}!`);
