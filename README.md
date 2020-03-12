@@ -20,5 +20,5 @@
 
 ---
 
-### brain-calc demo
+### brain-gcd demo
 [![asciicast](https://asciinema.org/a/309555.svg)](https://asciinema.org/a/309555)
