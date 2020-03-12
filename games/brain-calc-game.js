@@ -42,14 +42,6 @@ const getRightAnswer = (expr) => {
 };
 
 /* ************************************** */
-// const getBrainCalcGameData = () => {
-//   const taskText = getTaskText();
-//   const question = getQuestion();
-//   const rightAnswer = getRightAnswer(question);
-
-//   return [taskText, question, rightAnswer];
-// };
-
 const getBrainCalcGameData = () => {
   const taskText = getTaskText();
   const question = getQuestion();
