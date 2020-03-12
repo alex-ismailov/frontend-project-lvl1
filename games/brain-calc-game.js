@@ -1,4 +1,6 @@
-import { getRandomNumber } from '../src/internal-lib.js';
+import {
+  getRandomNumber, getGameData,
+} from '../src/internal-lib.js';
 
 const calc = (first, opertor, second) => {
   const a = Number(first);
@@ -40,12 +42,20 @@ const getRightAnswer = (expr) => {
 };
 
 /* ************************************** */
+// const getBrainCalcGameData = () => {
+//   const taskText = getTaskText();
+//   const question = getQuestion();
+//   const rightAnswer = getRightAnswer(question);
+
+//   return [taskText, question, rightAnswer];
+// };
+
 const getBrainCalcGameData = () => {
   const taskText = getTaskText();
   const question = getQuestion();
   const rightAnswer = getRightAnswer(question);
-
-  return [taskText, question, rightAnswer];
+  
+  return getGameData(taskText, question, rightAnswer);
 };
 
 export default getBrainCalcGameData;

@@ -11,7 +11,12 @@ const getRightAnswer = (gameData) => gameData[2];
 const getRandomNumber = (min = 0, max = 20) => Math.floor(Math.random() * (max - min + 1)) + min;
 const isEven = (n) => n % 2 === 0;
 
+const getGameData = (taskText, question, rightAnswer) => {
+  return [taskText, question, rightAnswer];
+};
+
 export {
   getUserName, getUserAnswer, isRightAnswer, getTaskText,
   getQuestion, getRightAnswer, getRandomNumber, isEven,
+  getGameData,
 };
