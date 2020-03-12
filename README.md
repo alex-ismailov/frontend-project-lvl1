@@ -16,3 +16,9 @@
 
 ### brain-calc demo
 [![asciicast](https://asciinema.org/a/x9eAXtp8Fv7E1l6uHrjhm6OMG.svg)](https://asciinema.org/a/x9eAXtp8Fv7E1l6uHrjhm6OMG)
+
+
+---
+
+### brain-calc demo
+[![asciicast](https://asciinema.org/a/309555.svg)](https://asciinema.org/a/309555)
