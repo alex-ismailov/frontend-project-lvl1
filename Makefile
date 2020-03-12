@@ -11,4 +11,4 @@ lint:
 	npx eslint .
 
 logs:
-	git log --oneline --decorate --graph
+	git log --oneline --decorate --graph --all
