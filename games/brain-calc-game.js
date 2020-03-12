@@ -15,9 +15,10 @@ const calc = (first, opertor, second) => {
   }
 };
 
-const getRandomOperator = () => {
+const getOperator = () => {
   const operators = ['+', '-', '*'];
   const randomIndex = getRandomNumber(0, operators.length - 1);
+
   return operators[randomIndex];
 };
 
@@ -34,9 +35,9 @@ const getRightAnswer = (expr) => {
 /* ************************************** */
 const getBrainCalcGameData = () => {
   const taskText = 'What is the result of the expression?';
-  const question = `${getOperand()} ${getRandomOperator()} ${getOperand()}`;
+  const question = `${getOperand()} ${getOperator()} ${getOperand()}`;
   const rightAnswer = getRightAnswer(question);
-  
+
   return [taskText, question, rightAnswer];
 };
 export default getBrainCalcGameData;
