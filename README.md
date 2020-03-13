@@ -2,7 +2,10 @@
 
 ## frontend-project-lvl1
 
-![logo](https://github.com/alex-ismailov/git-imgs/blob/master/brain-game-logo.png)
+[logo]: https://github.com/alex-ismailov/git-imgs/blob/master/brain-game-logo.png
+[brain-games]: https://github.com/alex-ismailov/frontend-project-lvl1 "щелкните, чтобы посетить Google.com"
+
+[![brain-logo][logo]][brain-games]
 
 ##### Brain games
 * [brain-even](#brain-even)
