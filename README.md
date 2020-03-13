@@ -24,19 +24,19 @@
 ---
 
 ### brain-calc demo ( [to contents](#contents) ) <a name="brain-calc"></a>
-[![asciicast](https://asciinema.org/a/x9eAXtp8Fv7E1l6uHrjhm6OMG.svg)](https://asciinema.org/a/x9eAXtp8Fv7E1l6uHrjhm6OMG)
+[![asciicast](https://asciinema.org/a/309994.svg)](https://asciinema.org/a/309994)
 
 ---
 
 ### brain-gcd demo ( [to contents](#contents) ) <a name="brain-gcd"></a>
-[![asciicast](https://asciinema.org/a/309555.svg)](https://asciinema.org/a/309555)
+[![asciicast](https://asciinema.org/a/310019.svg)](https://asciinema.org/a/310019)
 
 ---
 
 ### brain-progression demo ( [to contents](#contents) ) <a name="brain-progression"></a>
-[![asciicast](https://asciinema.org/a/309703.svg)](https://asciinema.org/a/309703)
+[![asciicast](https://asciinema.org/a/310017.svg)](https://asciinema.org/a/310017)
 
 ---
 
 ### brain-prime demo ( [to contents](#contents) ) <a name="brain-prime"></a>
-[![asciicast](https://asciinema.org/a/309901.svg)](https://asciinema.org/a/309901)
+[![asciicast](https://asciinema.org/a/310016.svg)](https://asciinema.org/a/310016)

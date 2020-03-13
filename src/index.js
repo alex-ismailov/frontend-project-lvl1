@@ -13,11 +13,11 @@ const startGame = (getGameData) => {
   }
 
   let gameData = getGameData();
-  console.log(`Question: ${getTaskText(gameData)}`);
+  console.log(getTaskText(gameData));
 
   let round = 3;
   while (round !== 0) {
-    console.log(getQuestion(gameData));
+    console.log(`Question: ${getQuestion(gameData)}`);
     const userAnswer = getUserAnswer();
     const rightAnswer = getRightAnswer(gameData);
 
