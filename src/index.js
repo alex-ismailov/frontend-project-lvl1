@@ -13,7 +13,7 @@ const startGame = (getGameData) => {
   }
 
   let gameData = getGameData();
-  console.log(getTaskText(gameData));
+  console.log(`Question: ${getTaskText(gameData)}`);
 
   let round = 3;
   while (round !== 0) {
