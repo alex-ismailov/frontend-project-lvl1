@@ -3,7 +3,7 @@
 ## frontend-project-lvl1
 
 [logo]: https://github.com/alex-ismailov/git-imgs/blob/master/brain-game-logo.png
-[brain-games]: https://github.com/alex-ismailov/frontend-project-lvl1 "щелкните, чтобы посетить Google.com"
+[brain-games]: https://github.com/alex-ismailov/frontend-project-lvl1 "Brain-games"
 
 [![brain-logo][logo]][brain-games]
 
