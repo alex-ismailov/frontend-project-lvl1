@@ -1,3 +1,5 @@
+<a name="contents"></a>
+
 ## frontend-project-lvl1
 
 ![logo](https://github.com/alex-ismailov/git-imgs/blob/master/brain-game-logo.png)
@@ -16,25 +18,25 @@
 
 ---
 
-### brain-even demo [](#brain-even)
+### brain-even demo ( [to contents](#contents) ) <a name="brain-even"></a>
 [![asciicast](https://asciinema.org/a/308792.svg)](https://asciinema.org/a/308792)
 
 ---
 
-### brain-calc demo [](#brain-calc)
+### brain-calc demo ( [to contents](#contents) ) <a name="brain-calc"></a>
 [![asciicast](https://asciinema.org/a/x9eAXtp8Fv7E1l6uHrjhm6OMG.svg)](https://asciinema.org/a/x9eAXtp8Fv7E1l6uHrjhm6OMG)
 
 ---
 
-### brain-gcd demo [](#brain-gcd)
+### brain-gcd demo ( [to contents](#contents) ) <a name="brain-gcd"></a>
 [![asciicast](https://asciinema.org/a/309555.svg)](https://asciinema.org/a/309555)
 
 ---
 
-### brain-progression demo [](#brain-progression)
+### brain-progression demo ( [to contents](#contents) ) <a name="brain-progression"></a>
 [![asciicast](https://asciinema.org/a/309703.svg)](https://asciinema.org/a/309703)
 
 ---
 
-### brain-prime demo [](#brain-prime)
+### brain-prime demo ( [to contents](#contents) ) <a name="brain-prime"></a>
 [![asciicast](https://asciinema.org/a/309901.svg)](https://asciinema.org/a/309901)
