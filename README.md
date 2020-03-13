@@ -1,6 +1,13 @@
 ## frontend-project-lvl1
 
-###### JavaScript tools
+![logo](https://github.com/alex-ismailov/git-imgs/blob/master/brain-game-logo.png)
+
+##### Brain games
+* [brain-even](#brain-even)
+* [brain-calc](#brain-calc)
+* [brain-gcd](#brain-gcd)
+* [brain-progression](#brain-progression)
+* [brain-prime](#brain-prime)
 
 ---
 
@@ -9,26 +16,25 @@
 
 ---
 
-### brain-even demo
+### brain-even demo [](#brain-even)
 [![asciicast](https://asciinema.org/a/308792.svg)](https://asciinema.org/a/308792)
 
 ---
 
-### brain-calc demo
+### brain-calc demo [](#brain-calc)
 [![asciicast](https://asciinema.org/a/x9eAXtp8Fv7E1l6uHrjhm6OMG.svg)](https://asciinema.org/a/x9eAXtp8Fv7E1l6uHrjhm6OMG)
-
 
 ---
 
-### brain-gcd demo
+### brain-gcd demo [](#brain-gcd)
 [![asciicast](https://asciinema.org/a/309555.svg)](https://asciinema.org/a/309555)
 
 ---
 
-### brain-progression demo
+### brain-progression demo [](#brain-progression)
 [![asciicast](https://asciinema.org/a/309703.svg)](https://asciinema.org/a/309703)
 
 ---
 
-### brain-prime demo
+### brain-prime demo [](#brain-prime)
 [![asciicast](https://asciinema.org/a/309901.svg)](https://asciinema.org/a/309901)
