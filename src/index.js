@@ -1,11 +1,11 @@
+import readlineSync from 'readline-sync';
 import {
-  getUserName, getUserAnswer, isRightAnswer,
-  getTaskText, getQuestion, getRightAnswer,
+  isRightAnswer, getTaskText, getQuestion, getRightAnswer,
 } from './internal-lib.js';
 
 const startGame = (getGameData) => {
   console.log('Welcome to the Brain Games!');
-  const userName = getUserName();
+  const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
   if (!getGameData) {
@@ -18,7 +18,7 @@ const startGame = (getGameData) => {
   let round = 3;
   while (round !== 0) {
     console.log(`Question: ${getQuestion(gameData)}`);
-    const userAnswer = getUserAnswer();
+    const userAnswer = readlineSync.question('Answer: ');
     const rightAnswer = getRightAnswer(gameData);
 
     if (!isRightAnswer(userAnswer, rightAnswer)) {
