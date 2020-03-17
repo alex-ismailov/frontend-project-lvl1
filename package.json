@@ -19,6 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/alex-ismailov/frontend-project-lvl1.git"
   },
+  "keywords": ["game", "brain", "math", "logic"],
   "author": "Alexander Ismailov",
   "license": "ISC",
   "bugs": {
