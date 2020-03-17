@@ -1,4 +1,5 @@
-import { getRandomNumber } from '../src/internal-lib.js';
+import { getRandomNumber } from '../internal-lib.js';
+import startGame from '../index.js';
 
 const gcd = (a, b) => (
   b === 0
@@ -14,7 +15,7 @@ const getRightAnswer = (question) => {
 };
 
 /* ******************************* */
-const getBrainGCDGameData = () => {
+const getGameData = () => {
   const taskText = 'Find the greatest common divisor of given numbers.';
   const question = `${getRandomNumber(20, 100)} ${getRandomNumber(20, 100)}`;
   const rightAnswer = getRightAnswer(question);
@@ -22,4 +23,6 @@ const getBrainGCDGameData = () => {
   return [taskText, question, rightAnswer];
 };
 
-export default getBrainGCDGameData;
+const startBrainGCDGame = () => startGame(getGameData);
+
+export default startBrainGCDGame;

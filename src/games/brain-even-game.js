@@ -1,6 +1,7 @@
 import {
   getRandomNumber, isEven,
 } from '../internal-lib.js';
+import startGame from '../index.js';
 
 const getRightAnswer = (question) => (
   isEven(question)
@@ -9,7 +10,7 @@ const getRightAnswer = (question) => (
 );
 
 /* ******************************* */
-const getBrainEvenGameData = () => {
+const getGameData = () => {
   const taskText = 'Answer "yes" if the number is even, otherwise answer "no"';
   const question = getRandomNumber();
   const rightAnswer = getRightAnswer(question);
@@ -17,4 +18,6 @@ const getBrainEvenGameData = () => {
   return [taskText, question, rightAnswer];
 };
 
-export default getBrainEvenGameData;
+const startBrainEvenGame = () => startGame(getGameData);
+
+export default startBrainEvenGame;

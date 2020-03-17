@@ -1,4 +1,5 @@
 import { getRandomNumber } from '../internal-lib.js';
+import startGame from '../index.js';
 
 const calc = (first, opertor, second) => {
   const a = Number(first);
@@ -33,11 +34,14 @@ const getRightAnswer = (expr) => {
 };
 
 /* ************************************** */
-const getBrainCalcGameData = () => {
+const getGameData = () => {
   const taskText = 'What is the result of the expression?';
   const question = `${getOperand()} ${getOperator()} ${getOperand()}`;
   const rightAnswer = getRightAnswer(question);
 
   return [taskText, question, rightAnswer];
 };
-export default getBrainCalcGameData;
+
+const startBrainCalcGame = () => startGame(getGameData);
+
+export default startBrainCalcGame;

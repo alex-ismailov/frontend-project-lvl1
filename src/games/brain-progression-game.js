@@ -1,4 +1,5 @@
-import { getRandomNumber } from '../src/internal-lib.js';
+import { getRandomNumber } from '../internal-lib.js';
+import startGame from '../index.js';
 
 const DIFF = 2;
 const END = 10;
@@ -35,7 +36,7 @@ const getRightAnswer = (question) => {
 };
 
 /* ******************************* */
-const getBrainProgressionGameData = () => {
+const getGameData = () => {
   const taskText = 'What number is missing in the progression?';
   const question = getQuestion();
   const rightAnswer = getRightAnswer(question);
@@ -43,4 +44,6 @@ const getBrainProgressionGameData = () => {
   return [taskText, question, rightAnswer];
 };
 
-export default getBrainProgressionGameData;
+const startBrainProgressionGame = () => startGame(getGameData);
+
+export default startBrainProgressionGame;

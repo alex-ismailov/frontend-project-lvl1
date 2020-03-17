@@ -1,4 +1,5 @@
-import { getRandomNumber } from '../src/internal-lib.js';
+import { getRandomNumber } from '../internal-lib.js';
+import startGame from '../index.js';
 
 const isDivides = (n, div) => n % div === 0;
 
@@ -29,7 +30,7 @@ const getRightAnswer = (question) => (
 );
 
 /* ******************************* */
-const getBrainPrimeGameData = () => {
+const getGameData = () => {
   const taskText = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const question = getRandomNumber(2, 100);
   const rightAnswer = getRightAnswer(question);
@@ -37,4 +38,6 @@ const getBrainPrimeGameData = () => {
   return [taskText, question, rightAnswer];
 };
 
-export default getBrainPrimeGameData;
+const startBrainPrimeGame = () => startGame(getGameData);
+
+export default startBrainPrimeGame;
