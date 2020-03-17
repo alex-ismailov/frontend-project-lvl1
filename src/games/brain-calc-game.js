@@ -1,4 +1,4 @@
-import { getRandomNumber } from '../src/internal-lib.js';
+import { getRandomNumber } from '../internal-lib.js';
 
 const calc = (first, opertor, second) => {
   const a = Number(first);

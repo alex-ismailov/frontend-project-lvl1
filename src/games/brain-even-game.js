@@ -1,6 +1,6 @@
 import {
   getRandomNumber, isEven,
-} from '../src/internal-lib.js';
+} from '../internal-lib.js';
 
 const getRightAnswer = (question) => (
   isEven(question)
