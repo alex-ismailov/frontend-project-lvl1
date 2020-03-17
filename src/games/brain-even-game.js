@@ -3,6 +3,8 @@ import {
 } from '../internal-lib.js';
 import startGame from '../index.js';
 
+const isEven = (n) => n % 2 === 0;
+
 const getRightAnswer = (question) => (
   isEven(question)
     ? 'yes'

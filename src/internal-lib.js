@@ -9,9 +9,8 @@ const getQuestion = (gameData) => gameData[1];
 const getRightAnswer = (gameData) => gameData[2];
 
 const getRandomNumber = (min = 0, max = 20) => Math.floor(Math.random() * (max - min + 1)) + min;
-const isEven = (n) => n % 2 === 0;
 
 export {
   getUserName, getUserAnswer, isRightAnswer, getTaskText,
-  getQuestion, getRightAnswer, getRandomNumber, isEven,
+  getQuestion, getRightAnswer, getRandomNumber,
 };
