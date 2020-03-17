@@ -1,5 +1,3 @@
-import readlineSync from 'readline-sync';
-
 const isRightAnswer = (guess, rightAnswer) => guess === rightAnswer;
 
 const getTaskText = (gameData) => gameData[0];
