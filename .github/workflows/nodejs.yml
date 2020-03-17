@@ -9,6 +9,10 @@ jobs:
 
     runs-on: ubuntu-latest
     
+    strategy:
+      matrix:
+        node-version: [13.x]
+
     steps:
     - name: git clone frontend-project-lvl1 repository
       uses: actions/checkout@v2
