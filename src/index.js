@@ -15,7 +15,7 @@ const startGame = (getGameData) => {
   let gameData = getGameData();
   console.log(getTaskText(gameData));
 
-  for (let i = 3; i > 0; i -=1) {
+  for (let i = 3; i > 0; i -= 1) {
     console.log(`Question: ${getQuestion(gameData)}`);
     const userAnswer = readlineSync.question('Answer: ');
     const rightAnswer = getRightAnswer(gameData);
