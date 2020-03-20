@@ -3,6 +3,8 @@ import {
   isRightAnswer, getTaskText, getQuestion, getRightAnswer,
 } from './utils.js';
 
+const ROUND = 3; // amount of rounds
+
 const startGame = (getGameData) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
@@ -11,7 +13,7 @@ const startGame = (getGameData) => {
   let gameData = getGameData();
   console.log(getTaskText(gameData));
 
-  for (let i = 3; i > 0; i -= 1) {
+  for (let i = ROUND; i > 0; i -= 1) {
     console.log(`Question: ${getQuestion(gameData)}`);
     const userAnswer = readlineSync.question('Answer: ');
     const rightAnswer = getRightAnswer(gameData);
