@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import {
-  isRightAnswer, getTaskText, getQuestion, getRightAnswer,
+  getTaskText, getQuestion, getRightAnswer,
 } from './utils.js';
 
 const ROUND = 3; // amount of rounds
@@ -18,7 +18,7 @@ const startGame = (getGameData) => {
     const userAnswer = readlineSync.question('Answer: ');
     const rightAnswer = getRightAnswer(gameData);
 
-    if (!isRightAnswer(userAnswer, rightAnswer)) {
+    if (userAnswer !== rightAnswer) {
       console.log(
         `"${userAnswer}" is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`,
       );
