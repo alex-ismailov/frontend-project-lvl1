@@ -8,10 +8,6 @@ const startGame = (getGameData) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
-  if (!getGameData) {
-    return false;
-  }
-
   let gameData = getGameData();
   console.log(getTaskText(gameData));
 
