@@ -21,7 +21,6 @@ const startGame = (getGameData) => {
     if (userAnswer !== rightAnswer) {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);
-      return false;
     }
 
     console.log('Correct!');
@@ -29,7 +28,6 @@ const startGame = (getGameData) => {
   }
 
   console.log(`Congratulations, ${userName}!`);
-  return true;
 };
 
 export default startGame;
