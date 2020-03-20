@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import {
   isRightAnswer, getTaskText, getQuestion, getRightAnswer,
-} from './internal-lib.js';
+} from './utils.js';
 
 const startGame = (getGameData) => {
   console.log('Welcome to the Brain Games!');
