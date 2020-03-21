@@ -1,11 +1,12 @@
 import { getRandomNumber } from '../utils.js';
 import startGame from '../index.js';
 
-const gcd = (a, b) => (
-  b === 0
-    ? a
-    : gcd(b, a % b)
-);
+const gcd = (a, b) => {
+  if (b === 0) {
+    return a;
+  }
+  return gcd(b, a % b);
+};
 
 const getRightAnswer = (question) => {
   const splitedQuestion = question.split(' ');
