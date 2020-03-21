@@ -8,18 +8,16 @@ const gcd = (a, b) => {
   return gcd(b, a % b);
 };
 
-const getRightAnswer = (question) => {
-  const splitedQuestion = question.split(' ');
-  const [firstNum, secondNum] = splitedQuestion;
-
-  return String(gcd(firstNum, secondNum));
-};
+const getRightAnswer = (firstNum, secondNum) => String(gcd(firstNum, secondNum));
 
 const taskText = 'Find the greatest common divisor of given numbers.';
 
 const getGameData = () => {
-  const question = `${getRandomNumber(20, 100)} ${getRandomNumber(20, 100)}`;
-  const rightAnswer = getRightAnswer(question);
+  const firstNum = getRandomNumber(20, 100);
+  const secondNum = getRandomNumber(20, 100);
+  
+  const question = `${firstNum} ${secondNum}`;
+  const rightAnswer = getRightAnswer(firstNum, secondNum);
 
   return [question, rightAnswer];
 };
