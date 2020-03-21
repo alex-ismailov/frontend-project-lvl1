@@ -33,15 +33,15 @@ const getRightAnswer = (expr) => {
   return String(rightAnswer);
 };
 
-/* ************************************** */
+const taskText = 'What is the result of the expression?';
+
 const getGameData = () => {
-  const taskText = 'What is the result of the expression?';
   const question = `${getOperand()} ${getOperator()} ${getOperand()}`;
   const rightAnswer = getRightAnswer(question);
 
-  return [taskText, question, rightAnswer];
+  return [question, rightAnswer];
 };
 
-const startBrainCalcGame = () => startGame(getGameData);
+const startBrainCalcGame = () => startGame(taskText, getGameData);
 
 export default startBrainCalcGame;

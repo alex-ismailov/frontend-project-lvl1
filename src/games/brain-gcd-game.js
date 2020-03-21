@@ -14,15 +14,15 @@ const getRightAnswer = (question) => {
   return String(gcd(firstNum, secondNum));
 };
 
-/* ******************************* */
+const taskText = 'Find the greatest common divisor of given numbers.';
+
 const getGameData = () => {
-  const taskText = 'Find the greatest common divisor of given numbers.';
   const question = `${getRandomNumber(20, 100)} ${getRandomNumber(20, 100)}`;
   const rightAnswer = getRightAnswer(question);
 
-  return [taskText, question, rightAnswer];
+  return [question, rightAnswer];
 };
 
-const startBrainGCDGame = () => startGame(getGameData);
+const startBrainGCDGame = () => startGame(taskText, getGameData);
 
 export default startBrainGCDGame;

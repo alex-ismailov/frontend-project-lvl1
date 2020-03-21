@@ -35,15 +35,15 @@ const getRightAnswer = (question) => {
   return String(Number(progItems[index + 1]) - DIFF);
 };
 
-/* ******************************* */
+const taskText = 'What number is missing in the progression?';
+
 const getGameData = () => {
-  const taskText = 'What number is missing in the progression?';
   const question = getQuestion();
   const rightAnswer = getRightAnswer(question);
 
-  return [taskText, question, rightAnswer];
+  return [question, rightAnswer];
 };
 
-const startBrainProgressionGame = () => startGame(getGameData);
+const startBrainProgressionGame = () => startGame(taskText, getGameData);
 
 export default startBrainProgressionGame;

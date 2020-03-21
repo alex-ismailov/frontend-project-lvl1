@@ -29,15 +29,15 @@ const getRightAnswer = (question) => (
     : 'no'
 );
 
-/* ******************************* */
+const taskText = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 const getGameData = () => {
-  const taskText = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const question = getRandomNumber(2, 100);
   const rightAnswer = getRightAnswer(question);
 
-  return [taskText, question, rightAnswer];
+  return [question, rightAnswer];
 };
 
-const startBrainPrimeGame = () => startGame(getGameData);
+const startBrainPrimeGame = () => startGame(taskText, getGameData);
 
 export default startBrainPrimeGame;
