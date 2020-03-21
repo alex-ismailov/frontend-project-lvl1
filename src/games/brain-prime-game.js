@@ -1,27 +1,17 @@
 import { getRandomNumber } from '../utils.js';
 import startGame from '../index.js';
 
-const isDivides = (n, div) => n % div === 0;
-
-const next = (n) => (
-  n === 2
-    ? 3
-    : n + 2
-);
-
-const smallestDivisor = (n) => {
-  const iter = (testDivisor) => {
-    if (testDivisor ** 2 > n) {
-      return n;
+const isPrime = (n) => {
+  if (n < 2) {
+    return false;
+  }
+  for (let i = 2; i ** 2 <= n; i += 1) {
+    if (n % i === 0) {
+      return false;
     }
-    return isDivides(n, testDivisor)
-      ? testDivisor
-      : iter(next(testDivisor));
-  };
-  return iter(2);
+  }
+  return true;
 };
-
-const isPrime = (n) => n === smallestDivisor(n);
 
 const getRightAnswer = (question) => (
   isPrime(question)
