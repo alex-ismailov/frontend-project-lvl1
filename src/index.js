@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import {
-  getTaskText, getQuestion, getRightAnswer,
+  getQuestion, getRightAnswer,
 } from './utils.js';
 
 const ROUND = 3; // amount of rounds
