@@ -8,8 +8,6 @@ const gcd = (a, b) => {
   return gcd(b, a % b);
 };
 
-const getRightAnswer = (firstNum, secondNum) => String(gcd(firstNum, secondNum));
-
 const taskText = 'Find the greatest common divisor of given numbers.';
 
 const getGameData = () => {
@@ -17,9 +15,9 @@ const getGameData = () => {
   const secondNum = getRandomNumber(20, 100);
 
   const question = `${firstNum} ${secondNum}`;
-  const rightAnswer = getRightAnswer(firstNum, secondNum);
+  const rightAnswer = gcd(firstNum, secondNum);
 
-  return [question, rightAnswer];
+  return [question, String(rightAnswer)];
 };
 
 const startBrainGCDGame = () => startGame(taskText, getGameData);
