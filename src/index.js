@@ -9,11 +9,10 @@ const startGame = (taskText, getGameData) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-
-  let gameData = getGameData();
   console.log(taskText);
 
   for (let i = NUM_OF_ROUNDS; i > 0; i -= 1) {
+    const gameData = getGameData();
     console.log(`Question: ${getQuestion(gameData)}`);
     const userAnswer = readlineSync.question('Answer: ');
     const rightAnswer = getRightAnswer(gameData);
@@ -25,7 +24,6 @@ const startGame = (taskText, getGameData) => {
     }
 
     console.log('Correct!');
-    gameData = getGameData();
   }
 
   console.log(`Congratulations, ${userName}!`);
