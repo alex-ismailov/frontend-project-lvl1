@@ -3,7 +3,7 @@ import startGame from '../index.js';
 
 const operatorColl = ['+', '-', '*'];
 
-const calc = (a, operator, b) => {
+const calculate = (a, operator, b) => {
   switch (operator) {
     case '+':
       return a + b;
@@ -24,7 +24,7 @@ const getGameData = () => {
   const operator = operatorColl[getRandomNumber(0, operatorColl.length - 1)];
 
   const question = `${firstNum} ${operator} ${secondNum}`;
-  const rightAnswer = calc(firstNum, operator, secondNum);
+  const rightAnswer = calculate(firstNum, operator, secondNum);
 
   return [question, String(rightAnswer)];
 };
