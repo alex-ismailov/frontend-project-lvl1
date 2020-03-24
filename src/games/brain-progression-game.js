@@ -30,7 +30,7 @@ const getGameData = () => {
   const question = getQuestion(progression, hiddenMemberIndex);
   const rightAnswer = progression[hiddenMemberIndex];
 
-  return [String(question), String(rightAnswer)];
+  return [question, String(rightAnswer)];
 };
 
 const startBrainProgressionGame = () => startGame(taskText, getGameData);
