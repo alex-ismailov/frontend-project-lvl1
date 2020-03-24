@@ -1,47 +1,37 @@
 import { getRandomNumber } from '../utils.js';
 import startGame from '../index.js';
 
-const DIFF = 2;
-const END = 10;
+const MAX_LENGTH = 10;
 
-const getProgression = () => {
+const getProgression = (diff) => {
   const iter = (curr, acc, count) => {
-    if (count === END) {
+    if (count === MAX_LENGTH) {
       return acc;
     }
     acc.push(curr);
-    return iter(curr + DIFF, acc, count + 1);
+    return iter(curr + diff, acc, count + 1);
   };
 
   return iter(getRandomNumber(), [], 0);
 };
 
-const getQuestion = () => {
-  const progression = getProgression();
-  const randomIndex = getRandomNumber(0, progression.length - 1);
-  progression.splice(randomIndex, 1, '..');
-
-  return progression.join(' ');
-};
-
-const getRightAnswer = (question) => {
-  const progItems = question.split(' ');
-  const index = progItems.indexOf('..');
-
-  if (index === progItems.length - 1) {
-    return String(Number(progItems[index - 1]) + DIFF);
-  }
-
-  return String(Number(progItems[index + 1]) - DIFF);
-};
-
 const taskText = 'What number is missing in the progression?';
 
-const getGameData = () => {
-  const question = getQuestion();
-  const rightAnswer = getRightAnswer(question);
+const getQuestion = (progression, hiddenMemberIndex) => {
+  const newArr = [...progression];
+  newArr[hiddenMemberIndex] = '..';
+  return newArr.join(' ');
+};
 
-  return [question, rightAnswer];
+const getGameData = () => {
+  const diff = getRandomNumber(0, 50);
+  const progression = getProgression(diff);
+  const hiddenMemberIndex = getRandomNumber(0, progression.length - 1);
+
+  const question = getQuestion(progression, hiddenMemberIndex);
+  const rightAnswer = progression[hiddenMemberIndex];
+
+  return [String(question), String(rightAnswer)];
 };
 
 const startBrainProgressionGame = () => startGame(taskText, getGameData);
