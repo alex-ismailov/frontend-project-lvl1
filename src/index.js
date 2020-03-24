@@ -3,7 +3,7 @@ import {
   getQuestion, getRightAnswer,
 } from './utils.js';
 
-const NUM_OF_ROUNDS = 3; // amount of NUM_OF_ROUNDSs
+const NUM_OF_ROUNDS = 3;
 
 const startGame = (taskText, getGameData) => {
   console.log('Welcome to the Brain Games!');
