@@ -1,10 +1,8 @@
 import { getRandomNumber } from '../utils.js';
 import startGame from '../index.js';
 
-const calc = (first, opertor, second) => {
-  const a = Number(first);
-  const b = Number(second);
-  switch (opertor) {
+const calc = (a, operator, b) => {
+  switch (operator) {
     case '+':
       return a + b;
     case '-':
@@ -23,23 +21,17 @@ const getOperator = () => {
   return operators[randomIndex];
 };
 
-const getOperand = () => getRandomNumber();
-
-const getRightAnswer = (expr) => {
-  const splittedExpr = expr.split(' ');
-  const [firstOperand, operator, secondOperator] = splittedExpr;
-  const rightAnswer = calc(firstOperand, operator, secondOperator);
-
-  return String(rightAnswer);
-};
-
 const taskText = 'What is the result of the expression?';
 
 const getGameData = () => {
-  const question = `${getOperand()} ${getOperator()} ${getOperand()}`;
-  const rightAnswer = getRightAnswer(question);
+  const firstNum = getRandomNumber();
+  const secondNum = getRandomNumber();
+  const operator = getOperator();
 
-  return [question, rightAnswer];
+  const question = `${firstNum} ${operator} ${secondNum}`;
+  const rightAnswer = calc(firstNum, operator, secondNum);
+
+  return [question, String(rightAnswer)];
 };
 
 const startBrainCalcGame = () => startGame(taskText, getGameData);
