@@ -15,7 +15,7 @@ const getGameData = () => {
   const question = getRandomNumber();
   const rightAnswer = getRightAnswer(question);
 
-  return [question, rightAnswer];
+  return [String(question), rightAnswer];
 };
 
 const startBrainEvenGame = () => startGame(taskText, getGameData);

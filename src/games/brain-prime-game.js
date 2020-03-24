@@ -25,7 +25,7 @@ const getGameData = () => {
   const question = getRandomNumber(2, 100);
   const rightAnswer = getRightAnswer(question);
 
-  return [question, rightAnswer];
+  return [String(question), rightAnswer];
 };
 
 const startBrainPrimeGame = () => startGame(taskText, getGameData);
