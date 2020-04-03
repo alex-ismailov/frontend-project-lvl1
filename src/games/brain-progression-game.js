@@ -1,6 +1,8 @@
 import { getRandomNumber } from '../utils.js';
 import startGame from '../index.js';
 
+const PROGRESSION_LENGTH = 10;
+
 const getProgression = (diff, length) => {
   const iter = (curr, acc, count) => {
     if (count === length) {
@@ -23,8 +25,7 @@ const getQuestion = (progression, hiddenMemberIndex) => {
 
 const getGameData = () => {
   const diff = getRandomNumber(1, 50);
-  const progLength = 10;
-  const progression = getProgression(diff, progLength);
+  const progression = getProgression(diff, PROGRESSION_LENGTH);
   const hiddenMemberIndex = getRandomNumber(0, progression.length - 1);
 
   const question = getQuestion(progression, hiddenMemberIndex);
