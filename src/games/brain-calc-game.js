@@ -1,7 +1,7 @@
 import { getRandomNumber } from '../utils.js';
 import startGame from '../index.js';
 
-const operatorColl = ['+', '-', '*'];
+const operators = ['+', '-', '*'];
 
 const calculate = (a, operator, b) => {
   switch (operator) {
@@ -21,7 +21,7 @@ const taskText = 'What is the result of the expression?';
 const getGameData = () => {
   const firstNum = getRandomNumber();
   const secondNum = getRandomNumber();
-  const operator = operatorColl[getRandomNumber(0, operatorColl.length - 1)];
+  const operator = operators[getRandomNumber(0, operators.length - 1)];
 
   const question = `${firstNum} ${operator} ${secondNum}`;
   const rightAnswer = calculate(firstNum, operator, secondNum);
