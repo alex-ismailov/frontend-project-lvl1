@@ -4,12 +4,12 @@ import startGame from '../index.js';
 const PROGRESSION_LENGTH = 10;
 
 const getProgression = (firstElement, difference, length) => {
-  const iter = (currentElement, acc, count) => {
-    if (count === length) {
-      return acc;
+  const iter = (currentElement, progression, index) => {
+    if (index === length) {
+      return progression;
     }
-    acc.push(currentElement);
-    return iter(currentElement + difference, acc, count + 1);
+    progression.push(currentElement);
+    return iter(currentElement + difference, progression, index + 1);
   };
 
   return iter(firstElement, [], 0);
