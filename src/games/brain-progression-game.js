@@ -18,9 +18,9 @@ const getProgression = (firstElement, difference, length) => {
 const taskText = 'What number is missing in the progression?';
 
 const getQuestion = (progression, hiddenMemberIndex) => {
-  const newArr = [...progression];
-  newArr[hiddenMemberIndex] = '..';
-  return newArr.join(' ');
+  const question = progression.slice();
+  question[hiddenMemberIndex] = '..';
+  return question.join(' ');
 };
 
 const getGameData = () => {
