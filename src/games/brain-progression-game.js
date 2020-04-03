@@ -3,16 +3,16 @@ import startGame from '../index.js';
 
 const PROGRESSION_LENGTH = 10;
 
-const getProgression = (diff, length) => {
-  const iter = (curr, acc, count) => {
+const getProgression = (firstElement, difference, length) => {
+  const iter = (currentElement, acc, count) => {
     if (count === length) {
       return acc;
     }
-    acc.push(curr);
-    return iter(curr + diff, acc, count + 1);
+    acc.push(currentElement);
+    return iter(currentElement + difference, acc, count + 1);
   };
 
-  return iter(getRandomNumber(), [], 0);
+  return iter(firstElement, [], 0);
 };
 
 const taskText = 'What number is missing in the progression?';
@@ -24,8 +24,9 @@ const getQuestion = (progression, hiddenMemberIndex) => {
 };
 
 const getGameData = () => {
-  const diff = getRandomNumber(1, 50);
-  const progression = getProgression(diff, PROGRESSION_LENGTH);
+  const firstElement = getRandomNumber();
+  const difference = getRandomNumber(1, 50);
+  const progression = getProgression(firstElement, difference, PROGRESSION_LENGTH);
   const hiddenMemberIndex = getRandomNumber(0, progression.length - 1);
 
   const question = getQuestion(progression, hiddenMemberIndex);
