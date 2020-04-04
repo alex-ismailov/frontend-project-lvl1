@@ -1,4 +1,3 @@
-// import startGame from '../index.js';
 import readlineSync from 'readline-sync';
 
 const startBrainGames = () => {
