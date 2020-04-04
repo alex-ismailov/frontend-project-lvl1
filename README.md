@@ -32,6 +32,7 @@ Determination of an even number.
 
 ### brain-calc demo ( [to contents](#contents) ) <a name="brain-calc"></a>
 Calculator. Arithmetic expressions to be evaluated.
+
 [![asciicast](https://asciinema.org/a/309994.svg)](https://asciinema.org/a/309994)
 
 ---
