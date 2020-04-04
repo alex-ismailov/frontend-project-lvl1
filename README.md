@@ -50,3 +50,5 @@ Progression. Search for missing numbers in a sequence of numbers.
 ### brain-prime demo ( [to contents](#contents) ) <a name="brain-prime"></a>
 Definition of a prime number.
 [![asciicast](https://asciinema.org/a/310016.svg)](https://asciinema.org/a/310016)
+
+---
