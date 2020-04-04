@@ -25,6 +25,7 @@ Brain Games - a set of 5 console games built on the principle of popular mobile 
 
 ### brain-even demo ( [to contents](#contents) ) <a name="brain-even"></a>
 Determination of an even number.
+
 [![asciicast](https://asciinema.org/a/308792.svg)](https://asciinema.org/a/308792)
 
 ---
@@ -37,12 +38,14 @@ Calculator. Arithmetic expressions to be evaluated.
 
 ### brain-gcd demo ( [to contents](#contents) ) <a name="brain-gcd"></a>
 Determination of the greatest common factor.
+
 [![asciicast](https://asciinema.org/a/310019.svg)](https://asciinema.org/a/310019)
 
 ---
 
 ### brain-progression demo ( [to contents](#contents) ) <a name="brain-progression"></a>
 Progression. Search for missing numbers in a sequence of numbers.
+
 [![asciicast](https://asciinema.org/a/310017.svg)](https://asciinema.org/a/310017)
 
 ---
