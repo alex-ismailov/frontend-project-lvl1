@@ -19,7 +19,7 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
-        node-vesion: ${{ matrix.node-version }}
+        node-version: ${{ matrix.node-version }}
     - name: Install dependencies
       run: make install
     - name: node --version
