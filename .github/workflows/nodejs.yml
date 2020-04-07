@@ -16,6 +16,10 @@ jobs:
     steps:
     - name: git clone frontend-project-lvl1 repository
       uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-vesion: ${{ matrix.node-version }}
     - name: Install dependencies
       run: make install
     - name: node --version
