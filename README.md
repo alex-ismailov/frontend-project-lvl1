@@ -7,6 +7,9 @@
 
 [![brain-logo][logo]][brain-games]
 
+[![Node.js CI](https://github.com/alex-ismailov/frontend-project-lvl1/workflows/Node.js%20CI/badge.svg)](https://github.com/alex-ismailov/frontend-project-lvl1/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/22e19349e341eddcdc3e/maintainability)](https://codeclimate.com/github/alex-ismailov/frontend-project-lvl1/maintainability)
+
 Brain Games - a set of 5 console games built on the principle of popular mobile brain pumping applications. Each game asks questions that need to be answered correctly. After three correct answers, it is considered that the game is over. Wrong answers complete the game and offer to go through it again.
 
 ##### Brain games
@@ -15,11 +18,6 @@ Brain Games - a set of 5 console games built on the principle of popular mobile 
 * [brain-gcd](#brain-gcd)
 * [brain-progression](#brain-progression)
 * [brain-prime](#brain-prime)
-
----
-
-[![Node.js CI](https://github.com/alex-ismailov/frontend-project-lvl1/workflows/Node.js%20CI/badge.svg)](https://github.com/alex-ismailov/frontend-project-lvl1/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/22e19349e341eddcdc3e/maintainability)](https://codeclimate.com/github/alex-ismailov/frontend-project-lvl1/maintainability)
 
 ---
 
