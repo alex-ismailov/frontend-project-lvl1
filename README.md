@@ -23,6 +23,123 @@ Brain Games - a set of 5 console games built on the principle of popular mobile 
 
 ---
 
+### Installation
+```
+$ git clone git@github.com:alex-ismailov/frontend-project-lvl1.git
+$ cd frontend-project-lvl1
+$ npm link
+```
+---
+### Brain-games usage
+```
+$ brain-games
+
+Welcome to the Brain Games!
+May I have your name? Alex
+Hello, Alex!
+```
+---
+### Brain-calc usage
+```
+$ brain-calc
+
+Welcome to the Brain Games!
+May I have your name? ALex
+Hello, ALex!
+What is the result of the expression?
+Question: 6 - 12
+Answer: -6
+Correct!
+Question: 2 + 17
+Answer: 19
+Correct!
+Question: 12 * 8
+Answer: 96
+Correct!
+Congratulations, ALex!
+```
+---
+### Brain-calc usage
+```
+$ brain-even
+
+Welcome to the Brain Games!
+May I have your name? Alex
+Hello, Alex!
+Answer "yes" if the number is even, otherwise answer "no"
+Question: 2
+Answer: yes
+Correct!
+Question: 14
+Answer: yes
+Correct!
+Question: 13
+Answer: no
+Correct!
+Congratulations, Alex!
+```
+---
+### Brain-gcd usage
+```
+$ brain-gcd
+
+Welcome to the Brain Games!
+May I have your name? Alex
+Hello, Alex!
+Find the greatest common divisor of given numbers.
+Question: 29 28
+Answer: 1
+Correct!
+Question: 82 22
+Answer: 2
+Correct!
+Question: 62 95
+Answer: 1
+Correct!
+Congratulations, Alex!
+```
+---
+### Brain-prime usage
+```
+$ brain-prime
+
+Welcome to the Brain Games!
+May I have your name? Alex
+Hello, Alex!
+Answer "yes" if given number is prime. Otherwise answer "no".
+Question: 23
+Answer: yes
+Correct!
+Question: 50
+Answer: no
+Correct!
+Question: 35
+Answer: no
+Correct!
+Congratulations, Alex!
+```
+---
+### Brain-progression usage
+```
+$ brain-progression
+
+Welcome to the Brain Games!
+May I have your name? Alex
+Hello, Alex!
+What number is missing in the progression?
+Question: 20 64 108 152 196 240 284 328 .. 416
+Answer: 372
+Correct!
+Question: 3 39 75 111 147 183 .. 255 291 327
+Answer: 219
+Correct!
+Question: .. 41 71 101 131 161 191 221 251 281
+Answer: 30
+"30" is wrong answer ;(. Correct answer was '11'.
+Let's try again, Alex!
+```
+---
+
 ### brain-even demo ( [to contents](#contents) ) <a name="brain-even"></a>
 Determination of an even number.
 
